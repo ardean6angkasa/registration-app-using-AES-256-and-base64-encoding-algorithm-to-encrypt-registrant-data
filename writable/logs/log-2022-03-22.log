@@ -1,0 +1,28 @@
+CRITICAL - 2022-03-22 05:02:39 --> Trying to access array offset on value of type null
+#0 C:\laragon\www\research\app\Controllers\Register.php(215): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\laragon\\www\\...', 215)
+#1 C:\laragon\www\research\system\CodeIgniter.php(832): App\Controllers\Register->forgotpassword()
+#2 C:\laragon\www\research\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#3 C:\laragon\www\research\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\laragon\www\research\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-22 05:02:53 --> Trying to access array offset on value of type null
+#0 C:\laragon\www\research\app\Controllers\Register.php(215): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\laragon\\www\\...', 215)
+#1 C:\laragon\www\research\system\CodeIgniter.php(832): App\Controllers\Register->forgotpassword()
+#2 C:\laragon\www\research\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#3 C:\laragon\www\research\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\laragon\www\research\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-22 05:03:13 --> Trying to access array offset on value of type null
+#0 C:\laragon\www\research\app\Controllers\Register.php(215): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\laragon\\www\\...', 215)
+#1 C:\laragon\www\research\system\CodeIgniter.php(832): App\Controllers\Register->forgotpassword()
+#2 C:\laragon\www\research\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#3 C:\laragon\www\research\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\laragon\www\research\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-22 05:07:41 --> Trying to access array offset on value of type null
+#0 C:\laragon\www\research\app\Controllers\Register.php(215): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\laragon\\www\\...', 215)
+#1 C:\laragon\www\research\system\CodeIgniter.php(832): App\Controllers\Register->forgotpassword()
+#2 C:\laragon\www\research\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#3 C:\laragon\www\research\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\laragon\www\research\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

@@ -1,0 +1,2 @@
+ERROR - 2022-03-02 06:11:35 --> Email: sendWithSmtp throwed stream_socket_enable_crypto(): SSL operation failed with code 1. OpenSSL Error messages:
+error:1416F086:SSL routines:tls_process_server_certificate:certificate verify failed

@@ -1,0 +1,44 @@
+CRITICAL - 2022-04-10 06:52:45 --> Decrypting: authentication failed.
+#0 C:\laragon\www\research\system\Encryption\Handlers\OpenSSLHandler.php(98): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+#1 C:\laragon\www\research\app\Controllers\Cryptography.php(68): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('Pl?J?t:??G???tK...')
+#2 C:\laragon\www\research\system\CodeIgniter.php(832): App\Controllers\Cryptography->index2()
+#3 C:\laragon\www\research\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cryptography))
+#4 C:\laragon\www\research\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\laragon\www\research\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-04-10 07:04:47 --> Decrypting: authentication failed.
+#0 C:\laragon\www\research\system\Encryption\Handlers\OpenSSLHandler.php(98): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+#1 C:\laragon\www\research\app\Views\cryptool.php(141): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('ZPl?J?t:??\rG???...')
+#2 C:\laragon\www\research\system\View\View.php(210): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\research\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\laragon\www\research\system\Common.php(1089): CodeIgniter\View\View->render('/cryptool', Array, true)
+#5 C:\laragon\www\research\app\Controllers\Cryptography.php(17): view('/cryptool', Array)
+#6 C:\laragon\www\research\system\CodeIgniter.php(832): App\Controllers\Cryptography->index()
+#7 C:\laragon\www\research\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cryptography))
+#8 C:\laragon\www\research\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\research\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-04-10 07:50:30 --> Decrypting: authentication failed.
+#0 C:\laragon\www\research\system\Encryption\Handlers\OpenSSLHandler.php(98): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+#1 C:\laragon\www\research\app\Controllers\Cryptography.php(66): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('\xE7\xB5P\x03\xC3\xDC\x06\xBD\tC\xFC\xA3\xEF\xF6^...')
+#2 C:\laragon\www\research\system\CodeIgniter.php(832): App\Controllers\Cryptography->index2()
+#3 C:\laragon\www\research\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cryptography))
+#4 C:\laragon\www\research\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\laragon\www\research\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-04-10 07:57:56 --> Decrypting: authentication failed.
+#0 C:\laragon\www\research\system\Encryption\Handlers\OpenSSLHandler.php(98): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+#1 C:\laragon\www\research\app\Controllers\Cryptography.php(66): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('\xE7\xB5P\x03\xC3\xDC\x06\xBD\tC\xFC\xA3\xEF\xF6^...')
+#2 C:\laragon\www\research\system\CodeIgniter.php(832): App\Controllers\Cryptography->index2()
+#3 C:\laragon\www\research\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cryptography))
+#4 C:\laragon\www\research\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\laragon\www\research\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-04-10 20:13:48 --> Decrypting: authentication failed.
+#0 C:\laragon\www\research\system\Encryption\Handlers\OpenSSLHandler.php(98): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+#1 C:\laragon\www\research\app\Controllers\Cryptography.php(66): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('\xE7\xB5P\x03\xC3\xDC\x06\xBD\tC\xFC\xA3\xEF\xF6^...')
+#2 C:\laragon\www\research\system\CodeIgniter.php(832): App\Controllers\Cryptography->index2()
+#3 C:\laragon\www\research\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cryptography))
+#4 C:\laragon\www\research\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\laragon\www\research\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}

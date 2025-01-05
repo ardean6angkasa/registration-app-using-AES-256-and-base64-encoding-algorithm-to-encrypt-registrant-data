@@ -1,0 +1,242 @@
+-- --------------------------------------------------------
+-- Host:                         localhost
+-- Server version:               8.0.26 - MySQL Community Server - GPL
+-- Server OS:                    Win64
+-- HeidiSQL Version:             10.2.0.5599
+-- --------------------------------------------------------
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+-- Dumping database structure for login_db
+CREATE DATABASE IF NOT EXISTS `login_db` /*!40100 DEFAULT CHARACTER SET latin1 */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `login_db`;
+
+-- Dumping structure for table login_db.cryptool
+CREATE TABLE IF NOT EXISTS `cryptool` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `text` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+
+-- Dumping data for table login_db.cryptool: ~1 rows (approximately)
+/*!40000 ALTER TABLE `cryptool` DISABLE KEYS */;
+INSERT INTO `cryptool` (`id`, `text`) VALUES
+	(10, '4ibBcib7HYn227at6Y9GZNrEj3KXPyNSrYf3lxSw1Ueqv/ecqfYYA8hoShXhOVbHm7elrBgwQ7GeOJdH3Nyaj4mQSXjlT2q1WQO85Uy/RQlNv3Jo4/4LO2oMgYLD6BmAkRxWc0ZJXKA=');
+/*!40000 ALTER TABLE `cryptool` ENABLE KEYS */;
+
+-- Dumping structure for table login_db.customer_service
+CREATE TABLE IF NOT EXISTS `customer_service` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` text,
+  `email` varchar(255) DEFAULT NULL,
+  `phone_number` text,
+  `status` varchar(50) DEFAULT NULL,
+  `message` text,
+  `date_created` int DEFAULT NULL,
+  `reply` varchar(255) NOT NULL,
+  `token` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=latin1;
+
+-- Dumping data for table login_db.customer_service: ~0 rows (approximately)
+/*!40000 ALTER TABLE `customer_service` DISABLE KEYS */;
+/*!40000 ALTER TABLE `customer_service` ENABLE KEYS */;
+
+-- Dumping structure for table login_db.formulir_pendaftaran
+CREATE TABLE IF NOT EXISTS `formulir_pendaftaran` (
+  `product_id` int NOT NULL AUTO_INCREMENT,
+  `nama` text NOT NULL,
+  `pas_foto` varchar(255) NOT NULL,
+  `program_studi` text NOT NULL,
+  `tanggal_lahir` text NOT NULL,
+  `account` text NOT NULL,
+  `nomor_telepon` text NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `bank_name` text NOT NULL,
+  `nominal` text NOT NULL,
+  `transaction` text NOT NULL,
+  `created` int NOT NULL,
+  `struk` varchar(255) NOT NULL,
+  `id_number` text,
+  PRIMARY KEY (`product_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=latin1;
+
+-- Dumping data for table login_db.formulir_pendaftaran: ~9 rows (approximately)
+/*!40000 ALTER TABLE `formulir_pendaftaran` DISABLE KEYS */;
+INSERT INTO `formulir_pendaftaran` (`product_id`, `nama`, `pas_foto`, `program_studi`, `tanggal_lahir`, `account`, `nomor_telepon`, `email`, `bank_name`, `nominal`, `transaction`, `created`, `struk`, `id_number`) VALUES
+	(48, 'FuOQIQuzfPk97oq7je2JHqIbqTv8vsjI3Riz3yL6uneQTrRC3nF3G/ptThZ5FY3AwWnpRDREguQe9bnWGjaytc7D9mpRU0Q60EgCDIOWy8tuo2tRDjUlvBeenmWXmSkK0lrJYDYatFMN5A==', '1647915684_2e1f481abf25f65492f8.jpg', 'eu8KZezss9ce0KT24hk8g34tx8vu66gcapiK4g3YgOOKM0bHYLbKLUltGF33+vfIcp9nyqfY4TSSuAvL3KVUQVFOGnYZR3yn7o5hh6e5GZmiXyor2VWvH0pH', 'mPO48IuVF9lin62WaxOfQCWqpuN477SndniKMrE9ztqTB0uW1xUFSBevyIthKTa2+/26MvEuyPT7M7PQOcwoaksm2U5wrN4FT6ff0h1D0SUw+GuII6h3P2rX', 'qfa0/sbke68OhidGYnbAdQsWiYvUOdPT1vPXBN72nVK8NbebbBE+G1c617kPWyhWDqnw9A2vnRLbxwAh18hM4Bc6wO/1TF3jU4aOuNZv6yDprEjdySjBm78we/zmtZ3XUdX7sbatPg==', 'eOLuHevVS+ATEvQNbrwX01QZ6bKdZf/uXtatuKHOT4WWy/CehkX+kEmwfY2SM5Sl3YoIlr2ELkSDjNxDCO/MJSJSJgGPTfeT3nOJ0vBHMbSjRNaecN74PJ8MEA==', 'chachachannel81@gmail.com', 'MinQMBXHe6Y39Psu0mcTHYuQ86v5N2N0HqCbVYasFp1EO6zaq+BTJ2r5oUunGejYNrqyrbwshsjjDDUyr/lw1DahQJzocKEpZkrCzFLmTp+m1Kc=', 'PwTlaj+oyieFijHJ+9fYJ5+SjJWZ7I4DTatriKjEQ8b/nWVsrEvjBPRIpMypaJkqsKss00rGcYPSVvyzdD+XT8p604Gc/FYwM0MIwabWU9XyeHuSNoiBdDv1', '7xpVSesveZPJna7KGslSNZNQZW02oWLzvJFzBSNfNJAtBv5o7t2PGvBtxcrmJYZzKdS3iyOBPCb7hDfxoXG5IAw7QFoq5Udxrm7ixiSGa8Ru27hUfGHpmfx9', 1647915684, '1647915684_4bfb0ef855495fc122a5.jpg', '3llcUrw+UNN285lodh5dD3iJq7ySiRwU8B+qydpELoLp5ARLBUW6ONDcpVeRZOy5DQS1U4vSOPh/qkd5LUwHN0/zq1FiqrT75X52Y3BesekvSSO7SZlw1cQ2kg=='),
+	(49, 'PWVH6l6sBDbFTraLdOi8AzQ9/sHRbXrWnXli2244C+x9Z1cNbDxEnOSReFqHia3g+6OMMDkHHwXK8QL8AI+PzAYsLJIJ9IB06uOHCxtpW4Wpasw9MTU/WJ7y/VcJEw==', '1649432435_77e3ea45eea599784103.png', 'ObGi+pL8uu4AJKnQHM+Zmx0PpKthv5gBkRGcLaKDcJdVuOp0joR7BqQY6AYCtp5LZEV2KPQkCh2M/NbWMdSj/BsfyrNbpKEu4hpoeXcr57g37WVs05AISCY=', '00EXOhCAfxyJBY4q7UePW4CcXzRoUqSuT1LJav0rE/7tYY9j8duad2OBDlry/7HAYM4Fb62MRYo1+K+AmaveUwKzx+sUpKxPUAgt8yLDSgR08AGFIhKvtUaO', 'lmJoONAs+sEI2h1tvLwbi0JWolIu/jyafD2/NgnsuSLxUG+Fc1GnErPkt8ZfUI8mM9JDoHYUMq29gSFnPhyC+QFcuXP5zyXz149MKS/FGrNQbjbcYpwDDS8lzNo0yA==', 'PX1vUquLViN/6gKw9A6d+vlNDnLMY6r+nxU8yeFmR4QC+kEyETvIAGaHac7OhtCyPq4hsn7wY3c0ZhkcfOuc0qXb1MmP7RsNTEdNjcemDKw57b2Oq+umz5PGIA==', 'chachachannel81@gmail.com', '83gqzrxlv87925FJ4KJjx211pdRnDqj2vKNP1EBJtjyg6eG8tH4AlynfpcaGmEL9S/PYrrC2blWdnC2IO7sgpbqmvRhTAD1oHfr4AfQiUoCpOd8=', 'xXSTzeMZLe9X7oAdtVkqq6e2VjJ/O8r1WSHJ+5msW/SoN9/HsTROR9aYSx13mnjxxiwMLWp0n9DY/wsHADDBfJRZI44jFmQalwKQG386dTj/kMtOh9480zZXPg==', 'XZpcidOIXnDPLq/6Kmzcha3GuxYh5P3HzFkJBWbPmW3NE5EIpc1JOwG6Mq8ZO3tfErtLznpmkzW5DjVWd26J7eAZHLiA73+bBmFkgC0uGYkBJhfrPdLZMb7B', 1649432435, '1649432435_ac6222c4ce8c4356a21d.jpg', 'BvFJ41mlqMIWBGaGeoyCGQCHpVHhCz+nHF+W5GoGvCh6o8lxrQdV9h1NjqPzu4sZbPy1G5FJRw/KfHfFUQ7FJZp/mjJWKQZDCPkxpH6A0OEn9D+OwOml2F803w=='),
+	(50, 'M9WHyhGU7r1opcPBHtr/yUlS7UD4vk+m9S1xbnrVsiJai7FK1DqvleLg/GLv08G9O6RJp/LL1JV+RlQfwozf36B4ZSLGq7ZA3nt9117D8hyD/ClP28Z+KqNlweCEGy4m3fM+PWt6yecLKOO3', '1649432612_a976ee3e5dae3332f9b5.png', 'HlDPa5aMO+tBcLLXhpMDo9Kja1yhrSd+7muMgykdO5NHAwKSdR16QYmtZYmqf/L7PnjF35UqBPI6SRoTQnjBiBOdl/RzqfpDA1LeEfMbc80v7RQWi/kBBbNVVWI=', 'Cj8ZwbYAPTs632mOyaOTSVfbpk7SbypJcN0UniqNSu28InLaRftrEuyTc5g0GWC/k1NbjcdPJCJaT3U1LdJ3Ua/bgDK7AmwkhvQP3JNZUPsbxdhuJMnQBHAy', 'Ehn1fzQISTTynbN/8KP38eghGkNGAB+EqBHLZCDXPkwqq15qgstGPQYibO1HqTwjFd+WC9rP18Ya+nbL6VK84jznPxtGBnxbAHc77PcpdjvZI9ds93PDOoyWaw7cf3sXHYjg5R9F97CkRzqT', 'k9lcXctydciRX0SN/09tZCFodBiRbuOhuSRx+BvJfZEBO2JQWDGg2IbSz4RssFcgHQiS9KZY8SXVJECLQuaMAnABRUBDwSlHMfUF9WGnVkQd2zcogOa9CNCchg==', 'chachachannel81@gmail.com', '6oeN+C3rLufglb8hpYdKi16umELOal0vWBVP7XKU8XANdIngFCK9WYTWpG3Hk3r64zU0B3BJyjhoVctDeAZK+bu/KAPnSInZYLLljLMiE7hICD4=', 'uEZiehmDGvVlDfa2Bn2q/HxKgRLnrT4wcHX0YvSw04kpOA4K728YYCuXfoF3oRd47giJy8zKF6ImHoGIuaF44nGqKHBGKJjSQW5lAfd0BpBD7vs3IySnK8gQKQ==', '0d/KU+goituO5Dn9FYHVMyPdVekqFjg8BeXSCFEKMjCiPX5xya0zl38UooOzSrf6orT+PtaBQMexnPtHYWuaqiUlezT+kOGE4afS2pGZTTtV839HiMGMUWbu', 1649432612, '1649432612_46b321857d9b64944556.jpg', 'kZImpKJn4NfZ2PPgt/WY7lE7ab50dOAEtR4r9E1kUwuLPczDxndPC3wb6zy9tCWArzpmTCyNNzpjtJ5bD4Pez0n1ZgiK68f2XpHZodLDCMu1xr0H3hFY9BKj'),
+	(51, 'SbOxgnJrJGALhwMiYeC9nmRf/OtmkS6/aUHJ40aJvnJYjXBmNnw2JKVy+PsE+reAemIiyi2s8p0XoaUhQ79F7ENZBdYw9F2FUcbzDjnzsXb8FZdqOPU+oEiNS/wOqQ==', '1649432754_31f18672dc40820829b5.png', '+LUhmqEvymn5UqWS7p8YcUauS1EDxu6CatikaF6jALX0+91URkuZRwqSG+iz/bMh52dfY0CnWbCf1BtZFnOQJHANPrfhHweRxKLXB2nluQ3Jo7D5JooU4YM=', '8SAvWy66oVNGSK6RWwQhBLdrwinN+PrqvvQsKQp5EG1vL3Hf1hxigJUCih+QtCsmgl4CWUAYteqRCRO2CJZZmPMEiTJdbqAAH5SJNhODeYfk8ECTC8Ux3OtA', 'HuIVqc3r01lqTsK7oGNwuW8ucg7fLl/X5qv7ZjHTJ8me0sklGokgezfjhQSYz0kRqGjzEc6MiCv/haOx+/9QZbuAfJ918K9ZCtKmCr4c6pwoYivsD5dOey0fxeQ2dw==', 'DMgMA6xYLuC2EASQ/v26TNw7W5jbmA3aMCbnlTqdZwj+Bjne7b464npTewnjHYDfciftxzAffAKRFwmROzZfugjkFCdq8FCmlGcVu5483gBLOXM/p/Zb0Xpyvw==', 'chachachannel81@gmail.com', '9guyNV+ar4qj+09j1ejWJh6JvtVrSgO/5sMaS8oKmKbkG8Mbw05ZPCEEx+j9G+ZRrgDtHSlr03MMS+bjuHSNIghVTJa6KbgOZFWffyMaiapmXLo=', 'I2q8qGjJ3PEB6k5YmvBOSAGW/SzSXslo+38iq1m/v9Yj/GfYbmGxlrV/eM+haq1+Ze496EqAyyZm9FM1LBS/lctVsFl7fQI4aE99nTZ/BJFNDaefbG8rQRuSww==', 'Ao38p89SFUHIuK9CZz/W2hUfR/RL1jbkk8l1jRJtakAil9e7YHTU1mIL1XRK1YqLS53xY7fggEmqlwaaTR8PkL7VCaJ+z4LO1JzzfB59bSi9MSaiUO8V54ja', 1649432754, '1649432754_42adbb0a1fe4d207b4fc.jpg', 'Vz0yV3yUgQVvuJJjA3A23GVvCweXn6pJ2MoOBkLt0xR5bwgOP9T2WJrtvpuzG1uO8m+7YhJEXZXKdV7hUg/NStJRzOOYirF3d3/kbcy/qX0EVTXKTFyO/N6cZg=='),
+	(52, 'qGdEPDefGFfStDOo/ZiQBnkRevi3dyzyW1xlSlrNikfFmFLAgPXzk6XpFe3oppA9HbjkrUOJZjELLHvdz3BMj1WMh7tW+oappX5tMg80wHmFssacZ5CH2/5uCay55BmNHUb1fQ==', '1649432880_8e1b7bb1fd35f385b7f6.png', 'Nn9iOvMZH8cXlKmyCsIk9+nB5NZLOaSMClJ80PiGxpnWvDnH4YjsJyHzB4CkGjz5Jj4Z42LOhQGOaEGVvu+pyZEdhlU6KCaM/6BVvUg9QV9c62u8kT1lR2rjG4mBbGi4F/ssLgPjoyQ=', 'E02SOpg3P+bF8EItZywhhZ1PoBoufMNIIO0oK4uQZK9zu+mOihVQ3Xg7eodN0xbag6WonZQTCixPPOzOepn2l9aVYlUz78XctJ9L3TY59gk1UBY9Sfv99JM3', '2oF9UoDo0E4Mja/2s5BoV8YiITfc6G3AVv7dHK0OBykyZZwGxY595+mKyHhpJkWAF//11ZKTuWRQxe6KRHerYCpGfIJhR00fiyk+IDz4BFkGfeR5GOa1OXkeeDggHkqvokGbeNrK', 'LAORbzoVLJr+tAmRIkz5J9FEXt2PAQJsRYhy2GuGYNSQWQx92HWhjOX5WrhwunsiK+zjAfnW4GLZWh1J2AXQJw+YFZbkhJkpZW5+PIVnmSthNVxrmTKQO6rjhQ==', 'chachachannel81@gmail.com', 'Ezm+QJ7I/F7JkNf5UL0gewJp3XsnAh+8BkngZfYZesa/4cyRRxzbyj4ii2kY6FZNMNKudNfNwZ2fB5saUGcJ5wHrBi2pa97oIXV2FYVIiwpqsD/Wb1SW', 'dtBNMTXKtFaSn6R9cnFJteM9f3lo6e3nEL2tvOssEfsNwJZKEV4KT8su19ejFi+4xL0a19CNtXAFZG9bjEpOk/b9di3TfAdNi+pSlPFQ86ZqlJCTOxHAH88Xlg==', '8F/P8jXGc1IgPV3Nw6F4/hVhWiaE5uvhxdkqUFCQahTpIwcf0tfrstjMDWGCKKIrN0UZh0ixt7AvNWZDHL3fJnthYHs0XO7el4ujOSl7M2WLen+puZo/bkyr', 1649432880, '1649432880_06b2ab613b58fe3238cc.jpg', 'cDzb8tcPAEhEVY4DprsfkjyQROpeh9GaFBcmec6/drE42v9zZekou3PuHr7o5/aRfZoXxUpxv/1fUtVfhyDdhSGE6tTdLn6tvu+CfkDCQEYZ6AWw5eM4nVSSDA=='),
+	(53, 'G+gcGI5JB4Pjd5KpTV02IiW1nkIXo9QKSuW/EfKQ0ghnvZkAJYhYNx0ywItPu69u3QHxC2zjaKvcf2xhFka7U/QCIwvSxbVt9r7Do+e1uPVYdKsijAekHV6//Mdl6v/z6B//EV5Io5fVoAc=', '1649433001_ca8d28cc71b917fb5535.png', '4QkzUwFoDNqPXvOeFS8enFQSN5rZZ+t2/u9LI3CWHvSDJHzSxNRVQ4X8l0hVOq0vFbptMPrO6JVB9Vxj+cPh7Z+Z6C6b2pbYinE9rO5EZ7kZrErmvwEfhKZsRHYfMNoubF0ycrST0Yc=', '8WlvJNwY0WV3gsruGnC6qBt3Kzin8S5WiUYAKPZc8EnCkaJuG6kUxdcNGydMzx8HQJEKUKUet4NwQ92lb+8oaHLM8suz3NtEE5Ug5yyr7iv8G4adMrpKiICn', 'YF8u/an+23sLVCYTjV7+kjQ/3jdSrMnOaq1GMQY6vw82nSb5LvdB1YnbRnFIcF9/4wpAt6mzdl7K+JVFVxJgjsiPKs0uvkLvSD6sQrdH6Yd43KmkB/RaIYufbg==', '9adKKLKjnPmWV9OCXMUMs6GKCQdW75fC++aqA3fqP4YipB1LuT2sATOzBsiXYplFV5B4gbEmzStnGWJ0orJ9yqmn6Dh4ZMA4tlv/2WMnbMjogPEfFTAPbvQPRA==', 'chachachannel81@gmail.com', 's+GIfd1D7nA5lrKN5PQwfyDrTWFgDYYJQiMD6vMwr9tWdRWADZbKnJkMXLbO7r8Bwod9DYyXvss1p6mKMkqLlBdi2+SPBA80totVGhxmCkWO24c=', 'j3vhjQBk3UeHy+VtS5taCDu5Ri0Q4xcTgb7Izl6KQvBh2e2wBlSgq/kbjBHUES7pjCyp1SCit61Aso84e8GIQu0jIrzdxYsdkwsc6KjbvMpTzjjUQ0Wv6ngZDg==', 'pTtfnLifsZ0Keuet2LMegMNugz0VwiKNXT3uTuWWFHsTSQAbqVlSuivAj2mPXqITBm4QKfP7XISIg3m8Qolsi5D1SQN3xJ/dm8cbT07yGet+0VtRZmsclzVJ', 1649433001, '1649433001_21ac49d17db4782cdc2a.jpg', 'mdEoIS0u9yaLZ0sBHL1bUN4ZBc6yG2KeeS19JqqGSqMey+HG3Z5wCsAUiSzf4OjbdgYKhjRexEqQ+oaUQaNFjb3q8jUIfy17frb+qFC2C2IJ+QiSlOnY9JPD6Q=='),
+	(54, 'aJM8Gr4VAjKhTe2zj5nPQmq5muOPK8bQ0rFMQJsZ5WCpHnkuDITzyTCjRRAWUEXteSpW9wL1dLBjOSEjcKG1/nFrDuqqLO+eqTXsrlcJaa3BibF2UGa88zpBb8+guaSvdw==', '1649433126_38f163dbe4bb753583b6.png', 'io0ukmN7R0mfbn+Jr8OmilD8gi/fuyjRablma/7ztLyUURgVn+zXWTnTrElqJflw8smXmfVEi7PX77k1PtgZVGKWh5IQu+R7ktNPqTrQTjst/9y2pG8M/5Zhsqni5eoWwgxdDt5lLfY=', 't6rX3DLSJ2/yH2fxVuvT05qNdTShQ0sweEbAxM4cRJo944N1dT3ZxTuVAWWuamu3DJvkQGSzB5+vIS3o6TS79MOUnP+zfSn80CBHCh1YwvUmp35+syJSeDdG', '/n0Ty6HerSLlEOvD4pwPw+vj0FjdPJFqKTgrYYVcgeuA/bkBLzca9iVJdT/s9J5HkQwzLoEdEARL3uB8/YqOF5ixWs0s3NGHCRqsko7//5wpZGbws1qBcmwlefYIwQ4Quw==', '9x7VoS2GnvU+Ri25UyXRfIVhGY/TR8qg1zrkSXegL+00Uy2wrp/FW4J5XMW/A6vL4Zkfm1IPwwPi75ig5yWzgUl1jxXZkxslxNxz1sV/Qpa3jmEX90KDeryeOQ==', 'chachachannel81@gmail.com', 'ZqFfIR51ThrIt63ooL97rtq9P/vzg4DXlQBG+QO1PbMpJu3maVhHAEehLGrD47xelQcn5kCWc2/Iwb34+he7W1hu3rabLCLWKmoizmx+yfSqDPw=', 'DZgCrK5Hy+E1ayDwl8Oj3N6DkvyXSFPge4tvJ4h7DdOUloTJqd0WbSTkIXDyNNyQPmLqdcXQ44p/78rt3fZB5FQ8/oDF85FTw6+46rBqi5INxfBkO7HN/D6Qaw==', 'Jgv1q3XPuR7Ki5EVlPxd99d8YDxE5WrurD9nD7xtP6YhgjmvX9DjaAezUNj/tZjWlFSYAFoV8a9EIUCpsqk5MH9IyLYb4eOiHGcuzi+O5b9ld/44iD+R5Iac', 1649433126, '1649433126_8fe4f88b4fd3e362accd.jpg', 'v/75tnTAWaPKpG9l78F93iTup8nXTFQgwhkmYRXcFqDtNs7sMs/+atMXF5GrnbjOJofTVU8N6wbDVh5ejf1Vcs5DgLRkvAOZAa6oq5DRYnBMDsDz7H4LHb6VxQ=='),
+	(55, 'vDymvHJkPbL1L+FvyB+dBUhRONTOxT49i1FHvFYLASfXIaVxkkLCDn7P2MUwliQsNUDKcclBBNvfVnWYukfoN7Aw5gXEcIA5/QuFZYWR0QurDQmkrQoPe9DjDjPFhOx4e7I=', '1649433285_dde7e34c907ae4a965c2.png', 'NJY8VqJg1GMMUyPd4w/5YkujQCANnDBMUBECgr/Jj1BlZWHT0gXoq6pFzSUdEvusQ4Tp0fOPStZ/uY3PxmdnoeLYD+l9Oq17ps8ePhGs0Q/bfbHuZ4+0aZw4cYEdh/BJoevylzmEI14=', '5iyj4KtmaY8Uxgp5AaBvsAXS22ouTPRzD88RkXMURmqkL6jVFQs58kgccoobcJTr80pqE7Me4aZjiQ1lN5xUMnEjAFXKa95CW0mzV6S1MGOImGkLBwnuYODO', 'RCgw2jxlUS16K0iHCC1iyIdFcTbJg0ml9RQM5MSruyInX39IK5zknLa/YJKLpZTUAMLA18MBEkUENjxUwUc/g4Zlpn6yluW3AcTTib8/db1FyClBI4JwINb92VtLMw+WO6U=', '0P4k0ngySd9XRy7+VT157Pr9S8o6LSAfzFqJOP5ko6FhtupVOCd5rCRBqhRMRXrsKHRRhbsZTtBmy+Ephs+YK3sAI1KNc98MYu1qFatA0A2K1MK7tMCiWWiuKw==', 'chachachannel81@gmail.com', 'PU81BK9/PwB8mutn2D2Pp837wsnST2sZWrehQ+flMRjkJxUQv4XS2j5YngK5VuMkBYANAK5RxDnCflBq47ZnVntzx4IHveb1GnQrwShv+DngsXA=', '7QJgwBhf1/tnXEHYDaAMSAtVJuzCW9bQwz5BbPoi0zf4jrfsUaWh8oaZqLSsSl9mIcySGbPkrXIvYFMe+yB9s/IyBghZtbVmtjl6c2AhvV673N7L6jcx7Rw0ng==', 'Jt2ROZ6ySNY4QUDR/yTElfos5z0tCk5njo9ebaa9tCFta3i+DTopIgegtFA1ONkmjuGA5y5uE82GeBvMpHll0l0fkvtM/+ZcOvbxG8JG4T0GdI0IQJ2A1JwV', 1649433285, '1649433285_480bcb446231b4528f54.jpg', 'y/QZazc8B5GjwLKDxHS8hpSzOQ5pbIaxBuqrL2EcCTl+AucAVw40ZKzXmZxCnPzsaA4ZV7RRszrUB4/RTKvoXoUvEbjlU2XVUA7eD4PXTSD4nIhRi74FmfIzoA=='),
+	(56, 'm3Q8JIwhxPcYjs7OPK8koe5G3mHxS93FHdai3J1ARA5IMD1BKMnI15PRUzYM4OldRwzXHfjCEKkXXnCv0G6I1g4CCSryRBbecDx3sUSJ8B2KhDEAGA5WKusaRJji2aCr9VgkbixnDA==', '1649433435_4ed9474c086faafc2935.png', 'd2zDo9CLCBkUlCgyrfO6J5uDOrpUs0N+YA9g4/WwFNIPhpsiONY43PZcjJKEOT7Klqg1BzB1pdgQ0o3Xx94zKmGor7Gs5TuYOVP9XpkLEDzFdvM7nEJ6slM=', '2WETQ/vi4GfUc/PWpkcWK4UtodL2zA9WUeSzLCD/CLR9yeSv37GoxPoSAACdYYX73kI/OJBxOzHgg7bQFIOtWodI3CUSFMg0X9BhXHlZgJD+VmZJQ5nlaL0W', 'WnZOvZzFw5vZeOv87IH80jzF9X7fXvOJAdIf6Binpgc2SP2fGDMaBfTlFP1pft2oFrfMYEFh4hpdDGqolP0Gys40p1Yts91REkBjuvi9IRFvHbS0FZVtE0zBIuu5DLX0P+udnmoOCg==', 'A1RQ+grypMoIaX93mBcN7HR8OUEKxKAZeFcUHFWSPd2TOdwk6vgBCPajocBA7OM30AgXa8MVZnU67TESlFrewEB/r7V3pTSG+A4Ppy+hxid3x5D7mj73KjkjGg==', 'chachachannel81@gmail.com', 'GZsalTa/qtJvYrUwmyVakR2BzBjpPjdqB/xTHYi8YMOEk/eO04VCRZokj6KVEDsx/jsCiztr2sVDOHMLat8MJPyxf2TNqjbFF9quZ29gVSKR8XA=', 'NPPuqV9H+7xqFe6UF6RD6ntpIHrKOn4KxfUc94LYVlyX3TAbnCacJwGaGDDAlG/pO/0hzZ7VdS5jVfFbgrLGNy9Oo55gqqrzLUFe6bd4mF02RejtGoRAvBKxPg==', 'lhIUZk38EKO3ZpC5d77pT8F8Fyiuvu6TJiPT4tBLmLnFegbWlgMYFmI1E6O+0Twrxjt4Cyu+KEnqAJBQnBycnNxeV2YbnCcksBZPSlkM+T8dbzuBlAUDgJKI', 1649433435, '1649433435_5c6aec177dc4999f0ae6.jpg', 'BcJbktYiqQnH3DmCQNQVaBLeu5mTA/AGTiXemGXteGELwPObruzPmOdNeBT4Ld3El4caaRIUr08J/KMwFc7AY848CDmiCmaV8Topt1sHrSWZ+KaJDWLLNiNy3g=='),
+	(57, 'kmZW2PX2RzlLKs3KUDKVwa+QkjmFA0PYf/TWW3LtvMz6+By5NTiE0GKWqjv25QN5vE1xWLc4NzcXT3iY9iG7yWxBm+/tqYYeK42imGQFjb9R7ZfwFTf9BhJFRZyUx/rRjUKPzf3SQg==', '1649433559_fe804f7d0faa8fe60c17.png', 'gMWFa7F1GFv9HVAotQCg+ghocXtVn3ZDbfeBg1VeFWOlgoy2J0phS45/yTjJOKEJCE7xeR6QArlEO02x2RB86yEjHbno7qgC/GbScwnXFWBlP+rU/Tux+Hlc8fabwKc=', 'JrbNQkOB2yqEYa9bcCmwMC4jNA+P9IHLVhB354l3fB4Z9TWsSV2jaC/jNYxrTC663f5veYzvQlp+DsBp8CmyuksGRnE6z56T/VG3nq2pv+P9RusvzjC2u+vV', 'FxueUyMt7mlVbjjfOFphw/GVbooUCx5NwnTyiZHg5vngCJHgSR6+AAv3IJ9sT9NJ8dvgLD8oeVvfNcy9UtIMSUnhrergrkfiyU8UQdDSZ3hC2gHb54ms5VkeH4/8lKWsocpAsbOQJA==', 'cHuucaT7ocHSL37Zm3t+WaOjHXep5Ysjxn9ciMkQjUUnpwg1CljkhXVbgJIQ8IWyLK7hse3nYq1WNp9RfbXke2MTz5xHnXBM5F04CJ++yyoUZ8gtYqUx2UzUNQ==', 'chachachannel81@gmail.com', 'ooVFqLvW339frj3t/zPvOgOey/OSKM61ON5u/pEH7C3IaFT0yoRfW/6AGFRyKNivnID47FyCjvOUQ/ygwCSiD8GUGgnMfNeQ1S62Jywg87snvFk=', 'hyd0iPTKW8c6hgEN8amoQv0AZJKXZcNiKf+obk3dvOcOayN6BgHjtgemg+1h8ywxsgPs8cs0DWiFWi0uXYXxvMTTDjE/wH7+oql3WpYpYsupZ4WuNE91cwsbyw==', 'd1hLVlYwR/2owxdyf5KAsX1a3HqJNBQEVKqS2utL9VvreR6q4HEZPhyODscuaecOmvO8In1szL38ggsL/RgbLCb3wxh1eW8ghDyenI1KAaXrpBQlSkyJgheP', 1649433559, '1649433559_f8218a5a93fc4148ccda.jpg', 'WBq54Cm5X2rOcGRyfl4XJ5c6u+Sev9BPhc6+gf0da5PiuMrVsu0enK4bWuqa+jhGAZwomRmiNuS4ZlxPXuJUNrmf5t/sBgVq7ShEUX6zJTRSP1rjeNRirclFlw=='),
+	(58, '9UQcetPGZK2ATF+9yg+Q5gRSSlNYdauf2oZ8VHLYn8p80joYWJk2590pT1D8hbT5BL6NUfhF6MNjrCeQga+urfCa6a8dbcVP/Rqx01Q4feVrPux048O1jKufPxvV4cGUdwMEtcyF', '1649934648_63f24fe2273ffcd673ce.jpg', '+5Sg2UyoHS0wFsqyjBRonyG7jSGg/B7mLXydDcekgI7i+x7St2p68mnp1Y7UljAnTAwOY8E/IqoDnHY5werpDCv5qxzo+HAe6TMnMFP2cDb0b2rK45TQTyg=', 'bbTWblCmnjTmJBW+0DYmQeUbSuZIOzN5YIlmxcjn8eTi61/0pd/GfzzJN4SaJKGytPCludo4N2NvCDV3WBDFgkcCNl/PRW6C4hIt43RY+6b04aMo2a+S6ucj', 'ln9VK0y/EACFX44bfDDSgudULl4+KsTcL3Vp9pC7hYX3Gd89bDE5zhy9UBnOkzm/m5/Qyrb5P7LMjPwI+bVQuO3xf84jD0XFKi08LHzxeQoCyIFbaXZUQ3o=', 'mvwuqDYz0zfnGBws849Tzz919dPBVQpedEs97uzQFsdx+DmRNIAE5NnNs1n3QL5Kca4rPA9k46kb4pWNhN9Vj99fb2gbwmD9E9YPKQPlTHlty+ax49ayu/UFdQ==', 'chachachannel81@gmail.com', 'l/Rg9hMMk0rvrC8+L1AV+jijN64gcJjEs5KiTna8lNVMi63+Pr2eIarKXkxxmyqNlgM5huKNK8JdMQjOiweo2YbLxoZ4y0h2fHeAZbbwn2/bUkM=', 'fXO+7sMa2C9cYWutyr5CtUUuMWPGjdM9xeRXDUU21pkQ493Nk/PsdDN6UBCD0z7udtk0oxLn/s9aoT05LEvJEXUq16aUBd2lyilB3rE6i/OsnXeD0M3DKcF5HL0u', '3ZJEULl0EuBUjZ6z+aLna3AGUsXYcfRWYWsWxE53/1zduUklxK9GnNLeqLFEz4HwtYb6BxGI5X36tDJrZ8LJ1VIIB5kDden9k2nbncrVXye/2hxmEjXw5061', 1649934648, '1649934648_1c96a41bc7797c1008dc.jpg', 'XelMv9C1es8bBQKFIIJ6at9x5WisQ2ChgvtpWEahF72ZtYf4MpUAPG1FhYRYLbbLd8wRVajVw1t3JiIX23U97WC7eWt+4XuZXV8laRLm1JuLKztbYkFZOArSF48=');
+/*!40000 ALTER TABLE `formulir_pendaftaran` ENABLE KEYS */;
+
+-- Dumping structure for table login_db.help_info
+CREATE TABLE IF NOT EXISTS `help_info` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `title` varchar(200) NOT NULL,
+  `information` text NOT NULL,
+  `image` varchar(255) NOT NULL DEFAULT 'default.png',
+  `category` varchar(50) NOT NULL,
+  `date_created` int NOT NULL,
+  `author` varchar(255) NOT NULL,
+  `picture` varchar(255) NOT NULL,
+  `email` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+
+-- Dumping data for table login_db.help_info: ~0 rows (approximately)
+/*!40000 ALTER TABLE `help_info` DISABLE KEYS */;
+INSERT INTO `help_info` (`id`, `title`, `information`, `image`, `category`, `date_created`, `author`, `picture`, `email`) VALUES
+	(14, 'Tinggi Badan Penting dalam Kehidupan Percintaan', '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', '1646406053_05b0f960728ad2fcc202.jpg', 'Information', 1646406053, 'ardeanreza6', 'default.svg', 'ardeanreza7@gmail.com');
+/*!40000 ALTER TABLE `help_info` ENABLE KEYS */;
+
+-- Dumping structure for table login_db.messaging
+CREATE TABLE IF NOT EXISTS `messaging` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `identity2` text,
+  `date2` varchar(255) DEFAULT NULL,
+  `chat2` text,
+  `message` text,
+  `token` varchar(50) DEFAULT NULL,
+  `date_created` varchar(255) DEFAULT NULL,
+  `certificate` varchar(255) DEFAULT NULL,
+  `photo2` varchar(255) DEFAULT NULL,
+  `fetch` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=latin1;
+
+-- Dumping data for table login_db.messaging: ~0 rows (approximately)
+/*!40000 ALTER TABLE `messaging` DISABLE KEYS */;
+/*!40000 ALTER TABLE `messaging` ENABLE KEYS */;
+
+-- Dumping structure for table login_db.pendaftaran
+CREATE TABLE IF NOT EXISTS `pendaftaran` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nama` text,
+  `instansi` text NOT NULL,
+  `pekerjaan` text NOT NULL,
+  `account` text NOT NULL,
+  `struk` varchar(255) NOT NULL,
+  `bank_name` text NOT NULL,
+  `created` int NOT NULL,
+  `inform` text NOT NULL,
+  `prodi` text NOT NULL,
+  `id_number` text,
+  `telepon` text NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `transaction` text NOT NULL,
+  `nominal` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
+
+-- Dumping data for table login_db.pendaftaran: ~8 rows (approximately)
+/*!40000 ALTER TABLE `pendaftaran` DISABLE KEYS */;
+INSERT INTO `pendaftaran` (`id`, `nama`, `instansi`, `pekerjaan`, `account`, `struk`, `bank_name`, `created`, `inform`, `prodi`, `id_number`, `telepon`, `email`, `transaction`, `nominal`) VALUES
+	(14, 'Z1UEn9dOCOoh2TGxehUj2r8SKFKmvjZVshVAki4i1VsSM9o5KKAmuejadNDynHCJ8ZzOGq0QoIoNH3VhAKkI5kr6ShVL0cF3tst+Bpx1fSgd0yeOplodl+p4I3Qv/QuVcY0zlBtXsE/w8g==', '5OQvVOzxXOT0myh1rW1twrOUDWpUU8M5GPyDNsrlxEEzYDeD26Fa1r8DCSiWRplpDKAW/alzJMrXuOEkKa8Pel9FRFWFeNGVmvoTzq2qkNjXmKKnkSBYtnYYoaMEDKv96vj19R/DTGRgu2LA', 'ms5botc8NqEPOzVXwC8O1iuTP5sv9c2wV6Axnmsmu8SQn1KPcHUSKstQskYaZXLkjfHg3FubBzvBI+nOcVwYls6ym1kGJHII5W31Ghz+qFSnC5iDA/wzFCMrFipu', '3vCZ1eyr1NpBZHfaW8w6pwja0OMnln2CEQwIFQeKuu2TqFftGihkKAzlXSJrC1dySaT4izEM8JZpwYz6p9jUL03JcFVakuYxN0WjegsQjRsntQXPFHcA3iVowfToSF+FLFE=', '1646402858_47736b451a7a34c3f9eb.jpg', 'bgc0FLrNfdVUAjJh8hKwRn7Np+6ocNDmuRQoLcFMZfHHkUHBrkqnYqBznS3YR9RQK0ud8cs1u+ajLpBJtC79VxmOk8n8VzD1Wut8/PatCht9Pnw=', 1646402858, 'PAJAK BREVET A&B', 'e5Ycle2NXjvU2EmhEf93iUZ6iiVE5s5kBf53X7YC2U6vTyeSEzO5TPG0d8KrUf17tv6ec5DlyxwTwBpKCwOC8D1vycfS2vNtOKfMe/FQCveXlx6Lj53+HHU=', 'uaUY0eWfaciNg1jdpRCGM7LyLIGT33ZI0FAUOjxLkeRRDCQI0iEuPF50Et+naepYKPBSTnQeRLA/lavIZGETMcGnZN4kvkiH3qVqzbTn8+zAuhRJpUdSmQUh4g==', 'GC2zh99RTg8f7HkFfs+318YsUmwrZ/g1iYCVMhxGn65FZRIQHK2a6ISMVuZ2DH+E48emzexLvOmB6hFQDWKV2YHj3iw5H8jRoqKaldpV170EODOPojuskCufSA==', 'chachachannel81@gmail.com', '2fhF4JztwBRfilw3n5NOpi2nHSEKwY0KqR79dwtn5aPw0ntJPk8BcA0aAXQpI3oBRgWolvP1e5tPlvGs5SVe4bK/ygP8kXPI4Vtd9jszOaMZVcCI4agGHeN5', 'xk//Mku6Yff/yP8ppgTkiD5HpsjglP5LWfMNBvxu+t06zurxEbNLDdXVabioVBQdwckq7jN3nj+2K2LK8agbEGjhRn++RcIZMXjEQ2yvgJN094EUShyRz1zlupg='),
+	(17, 'WL+jVz1lUEEUq/F2iYpY8mdlnwHecmKnVxnPwzixPd0l3nqN0V5rZp1mu3FL+GuH8i2eFbg4EFRU8eBR9dXP56ch0v17Xg2QR8ZbNdt5rPFmxs+jYSD7k0RZZ5XEXQj14yyz4g==', 'odAC1fLnyazufH0DUlsp1+SjrAZXbzTUzhmhOyelXzUnwdrGGoSoEjuySa1jfgpmKRn41Is4oLi3YdfNZav/YJQw1wg3Wc3Kx86TjildrssSm1yZPN6Mz4g9wY1UcUs42RLzT7s92WWtxpBT', 'b37hSPitObJhYhe/yTK+M65g67Yz+kvnP+BnozQvwXnHp7S9XJUjcnQJj7c72s51BYACGiZT/DIS7K66TVSrGBYbFax30jO9EKK6d5sNTGNSakU6V18p95C9/dFJ', 'iZNSDw1OZO+yyu1XEJEVH1zdpa0EodgoFdbA6nbSdJJzF/fNoWQXD5cI2BTqata6K14WwSZhxqLvZd2y5uQs8cRWWOmKoBRCKtzgEVzZ+Cx5aOCTr/chhsBKi3MD', '1648217586_d81ceeb40eb41e8744ad.jpg', 'BNBixU/TaUZB8HXJBDP5SnuTpteDKV6MSKrTII4x4x02x5KfrB3aeISIWafrEnodgwLC595G9esrExgt3+YF5pr0QPUlBrO3sg75FZYQmrTRQAo=', 1648217586, 'PAJAK BREVET A&B', 'Bvi8Fox0+cSX86jC18/XzVkWXJFcAYyfr7mYye0O7gUWMUhrX+WEcRp2kWqzy3UZmRxaMQyQlTNoVjAGvO002F/GyPaeH6c83aJ3AGcBnZCmAzHOfN6mv0E=', 'qtNthuvDqOrj8iCq8umhQJnBGAWDX91mA2gL62CD9RxaJ9SKquq7az/wUeohNUXBsJTZmbWVBggJMMhiKsrroh+etEsP01vg53gXW/WnoJf2eQAkuPUPZGeing==', 'BTT33n61PndSlV87pX7rgcvPLe92DMO4FJJf6wTK/a0STGivJtMUi7Gawj19oQ4Uf2WMtiamShXScj7TwQTBveOi3U3MvXehYueH997Z6dGYvPOseWxeplXDLA==', 'chachachanel81@gmail.com', '+rMoQc+XIsBFXHV/sUKSP/YWghPq2+8ptXWoYSjhTCFs4lsucJaZuXRVBA1YEIq0crvqgQKLo564sDvv70YgwkgNQOJbEWqI66gibpchbId6meKIGifrEL4x', 'aq/jHkVArRyYPJ3xwsgSBjKuJWTw5qDvvwGelJ2rGpzfBHrKKYIx+nt80HPheNrveT0oczDWWIfylE/7KjX+AeILzvvn54UG5J0wkpfWmRvU/JZrftvbXs18/4sf'),
+	(19, 'CcJW+X3g8o3onvYdSScGoVXwW7L7Sueo7L8F+0xmj9EJVNKB0h3SoUFV14tl9GNHLD9LteWtjjNb4yWk234rcQy9ozWW1uaHfPjeCbFNjCh1oy4cNp+jH5B6gG/EHCp55rYqvw==', 'BYRGzIj8fVGIQkziDplbovw1hy3PH06tqUoqZFekxsung1DnVB7o0DnkZEJf9u5fO4UifspF9VdWRSRNwR15UvAw1calOVOLLfRiO4R6yro8JHIRPGKGlI67hRzNel9PtdrKlL1nO3C42TLZ', 'mfNzhVdciqz8VL0tFpzhsmYaAAw2sY3yWCAhyIV6O00GBvCkUtm75+qHFV9TfFL5+0jcCkDWh8v7NfiDcNFA1SwNdqZsC31gRWe3+/O/JsuQ/ApANbKMEfOwj3KC', 'NJAqW3ue5BQl6htbnHP8B+to3mDQYfZ1TwdZtZ9Ej8wtDIr3X5cKlzgkpMAbFCsmLAzVe3x8E5erTIk1C8qTmTQ7HYjNJnIrwBzgNLmKhnHTa3+O7bXsuol1V+mXnXAp8qTHFA==', '1649433730_ac2ffddcffbefae03a8d.jpg', '31dj+KhO9HZHpxbbdgM/EZGkeWhXy2/ZWEoB4TsK1VHL/EjUKqnF/Lu9ao+6VPerFCgMWudNcOXd8Uk/N0pHb57WPSkYaH3Arsl6srOe5Y0nKT0=', 1649433730, 'PAJAK BREVET A&B', 'ySW87xUC0dPSvEaz4rrlSsn1G9A4ANzmGA87BIJzirGqNOhCL9hV+8rMJ1czhjqcq3dIZ7TN0avnKwi2zSrKNUpFsFjK+DCKUi8lCR9h4dVm4WB52m9UmM4=', 'GZBvDIzT/mikmXyonkmIBBzb4sdkqkueFZZqijDlIILovWPzpGPEdH7wCXIk+DQdXkNQXEmBB9Z6apJu5LcIT3V3jUKZvznOen52okJmF39c6t99wm3jKHYg', 'tSk85Mx31/c3xpgANBF5y2r4hek+hTJLq4rsQLfkt65mQwGWz/GYw/2cXPIUXQwpLZ0FsLiJXkFFs35sFBO/e9k6FTmemUesOegUvvZdKUfmI8zYy2KfMVo2DQ==', 'chachachannel81@gmail.com', 'plbtVLxB6+XBYkrKfgGE2BuCNLF/17mXKylR75UomcnTX1CjQ/RTBOtIoEgXhmld/TzLELzHBg5TacUXBYG3SIkknkgbZFujQ8yVHWmfIy6eB5GwrORWoeTH', 'Q6d/3XAiuxuqTOGSJjoK8E9TLDpDukTb8kAEn/M3EihqmbUe0JIdvsFtcquKAZz9aeW65NFz5PoHeuGJN6rsyAc8uYVdxzfML1mcfA2/lVldy4dQoGGXTJIbGMUW'),
+	(20, 'pxfuohMuoVbWc00cf9ri56G21GgQ+z0Ddx9MD9Penv/Rl8IZ3Ir7TXNZZ+O0MIZQ7lioVUzjAcb5B+B0lD/5nC4BV+X/FDAMGyCbtfB5iFgpbw6CwRpKAJbOjQ==', 'mbm9VV+eyFugk8e003pwg69cW/rGltpw9MKUt7577pzQJA9mOPcOpXv/y5kcoYN8dbK23FgSCf0lICHTlt10aedGnR3mtg6GfQJzk4HzI6JGLbteCJ9T8jQfS49VVw8HBp119eWWkRteIICR', 'JC4jR75kyHolQUTFquJA5P9sP8jrhaFi4xqAoYg5dWkX8FAnLAF77u6GMvQn/37fQM4GPqLd8pxx89LT+PswrMW3z/CymVIvmRN1J8bCRP3DICVlpo+mj+VzGSMT', 'vZqSDTCikY+EPOmA8H0DQfH7pj6YvetuaZMvYKRI06abZhPv6bxGIi1JQzEqKTyVfMz5cGmpKHbZw5uarhTaTZGnPsWxhqBo+Y9ZTVqRTkiCVsJE2xt7CJEt7w==', '1649433868_677bf5178d65129ca1ca.png', '0Ou47t5nA1ZfU13NvBXke7ou9fG00Ku9law5UTQam9f2L54l647usOzXw+b65viwonuQB+CLqKkc2LcSgYB3U59EqA2hq9U/eqjnCkYr8dO0NPQ=', 1649433868, 'PAJAK BREVET A&B', 'HV8ua/b8B5zmAyCAuKljtMS0srSLD7vLAUQEd7ow65/gffEXa9BHg+GReWiGd+pJBw19ZiBJuC1SAeJh6s7KtSAeWBiv0TYBvhpKArJPQpj3iGqzDDUxPUU=', '9VOwzh6XfVH5wTo0so7I6Kl6k+qsxDuLKHTQPt2oBSX/9EqU8TGbCSJe46vWHZIrgtAsYQ5/yjfQwCVbRjjihuEWfi00eL2zr/HHCTGJBFR1q9MD7XGpWgbQ', 'iqEv8uHwrETRh4d8z976B6wU9qY2f6CViKLGpJ/fXHX4H15ciTYYGIJWekOWGSkpCf2v4+Y/lXn3Avt4SwOMLmW5zgkBk+8jI3CuPyJv3ht8iOTF0/coN8+dgQ==', 'chachachannel81@gmail.com', 'Hkg5llcoLOGy4O0OyjAHRexsFz7X5H8xZFsV7ANjJcIF7JsOLhWivzCxhyKHoejX3Fsw6Z8KWTl9QcsP2xsqD0rBewfM8Dv4SRp34IIz10BQaAhs+FYxAxOy', 'PRfttIHacjbPTbU3bF/MgGzkJzukK+dxi+IaTPuqiZuqlisSYo2QoyBDcsqugpXDr60goSD9MUQ6L8Sxn4y4YPobGgkxowzoFTEm/u5/lvF8dXHoYyT1dLA6Hpa/'),
+	(21, 'oUu/rEYSbUvVo4A7u1JmYQWLfmx6CU6WK5S/Za2XHyvvGZllfp2STkI6Imz+ZBCHv8oiEvyf9V+dZ7Fx0TyhDjZVvJK/ngmLckZgFITBSsM4TJvzjrYr7oHwI1PL9KCXh4fMAFHdwGn+RkZY0lGKz/yBXQ==', '/EmSeKKpy6rlEa47kyElakoeVwbORiCspibFImUGeCeUuPEAdn8eC9ycgXaKau7p12gNp/DkCxPazdZokW+pf7dVCRrTcpL9elPcyDN+iXvDj0DPVJkYADRbNmXGIiOseBhVCc/q1ux0HJ0s', '4E/cV/BKrwli6MmATET59FXLtphUtXP2HY2+UKkdmTuxpu9s8AsxnTRwijk1Ed7c+z/qcmFmQaXXDYLb9EfmuzNKrrjDOAZdIlNnMXX+n/yde9Kg60IIZEyxLogrYQ==', '2qK1xsKCr8sIaETE5wDEY4iHGD7lxdtDrQuWszr2E3lxyfQ+eZpMj+ojHLANck4vqFGeF8l+WQyIWUPeJYMDE3lxkq1thTuToj4xr7rM1f0PU/q1FHWHUwgUwblDJ9NxLboX98+G/4+Fd4C8HzBA1c4iVg==', '1649434138_ec2195e683c290891b90.jpg', 'BDJ1fufW7k/aZnDsOq0mr7PvMkVVkmt3izf4wnYX4YusUKzWkFnyz8+OUlBvBvtdy7SD/fbYx7AujUmJOpFztS4Tt+idHz/vWykKSouZ3NO+pMk=', 1649434138, 'PMA - Penanaman Modal Asing', 'xqZUM6xTupomJIf+g70SnRoPrxt7G5w1rRDao1b6PKBjA3lUFOdz0eOOPvLpKLbTSDlMoXnhwf6eiC6JeRiIJ7joPrIXnfgg8HJqMyITa9OI0LBgozHtr50=', 'xdw75Fey99Nu0FIc1P0hBSgGBkjzzBuRFisPbUR4xd1BAYGQHbACWG2UYfex/oBKVdtMNvdMf+mMeOZauk3V6gn/1ETCAZhwD/WIL6dzAR/CD+dBksji870t', 'bZ5oq9UarzIwVkBePqRNn/65aKE/ivEguFrz+gwTMrf4IyC6lKrnljMg9IakQuuahr9HkS/08upC6pfKO9fpC5Ln7eAO0vZ2gcgn+yKOU1AB3YPDzc/ziogOMg==', 'chachachannel81@gmail.com', 'R+HheCnPqN2P4/Cf8HDYX0HQBVqBMUKBCsjbGiBZVeJWN7MWXOS1Rbj6j6gLYVAiQjmM5jtNx2XzGJwPkP1vsd1XS6K/Xhc4HyrK6bICNaP1JvDZM96Tshr0', 'xG+kuLunvrKX5AJ833asb2v7AMQLbMM6mjxzfEX21seZZoTRuD8AgmfQIxwD/9Ael6E/A9KA2CM26UsfQK5tZE9eyayl/zwREDAbH5OG9o7tOYJQEgkwX7bsV/Dg'),
+	(22, 'rnaQthDUU8BMgE5y60tfNgf7lorKIU48jXCjSD/4e7yhZZ1LcfuARWnULBypvumGLpim1Wix+9BJAJin63XWH2mC1ccnOR+qG8SqleKoGWkEngZ7KihIgrks1nojylF30g==', 't1kt4kOAUwbUTWGhiG5EK0BJzyRAxy857rwB1+h47apfUljMKXZcNNxgtrIjRLnVuNVlsuY5c7+PhjmkjWV9bbMu3FqkgRXORX6RZTkvkjSc+9wEOq5mDSEEPCSR7PwKx+sH51hakzIlbah1', 'd9NB24QVUXwox8Rj221EOSa/QFz3PFP6NCtvEfDNc+HSUQKoULzQzrZPIvOtLVtWo4n5ALrDX7Q8rHnzPL2rAovz0JDNRajk5+aZJfW1zBIdIUEz8Eed9+ZNaUCU', 'p+87YsjTXGS0tIAIDsW5IzVxGj2noxW7MUo+iybbXO+OI6/sja6A61aG2Ke8WnbYQYUhNIN7NMzXya0XdZ5CpwGQ9q1DGXT11EkQPjD1UkeiAZToCJ4oudEPCOBjdKhkow==', '1649434274_d1fcd0347f78a9f4fd19.jpg', 'Xj2kURRg3NuUB7E5SArtmP5lIJkt867VTQUQUvF4sCzOq9uh9gVgiKvlzoEwulHN/jHzCyehBuK7lNUfv17b/JVtw6nFz3IcZWP1razW8UVvaHo=', 1649434274, 'PMA - Penanaman Modal Asing', 'ttc6XWsQYJQCjX2XDvBV+IcxYcbCfu9H4CxmFaG0zWTfNMscFtvD/X/jOhaYIscXd7bGrz1eUmnvmXSVWr+xT4dNsKRCyh0bXPTbrthCH6+kFM6SPt7oBcM=', 'AGlHp1FgnvZK7SWmOOqqClrn5BajwBQ9OZ4eY5efhWMIZe4QehR8ZWMJMQiOK0yHaXnBHhEJ7V9bwtDV1DPG94/Yz6y6jurSEGDKhxXjqCEOd2uXFpUdN8m3', 'wvjS/TMsg43tB/1kOnr3qrjx0fKVeTzQxYPSYYD4x6/fLIKi0pYgU3liYa6sYGJBr5ZZ+694oURxbzvGfq137S/C9IknO8hXvLEv83TTzUCbfwWt+NZx0E+HNA==', 'chachachannel81@gmail.com', 'YjQx7+W1KTGiU/83D4HNCGyma2YtcHUZJIXAln0bCgOtNlSsRYxnzUsilLPs6NtM0Z44pBCiOWUo7VcNOLAlLj1yzRBb9Y3Qe16w3F/04ompqzQkUTLjNtFz', 'H7sxcSl3hy8UXiRQDT01h7hZ67Lh6VfTcCj2jBCOf+9VWKxnXM5DEItxJW2N4U60SnBQTgmOSClVPrnetPJksUEDhO74xLOqrMn047QFYM8eC7RrTOy/Ry4irKy6'),
+	(23, 'tHY7jX3iHMd0FUc05Z0Kf/hNeUgO3OTXlX/oewvbp9kWFN/B8og3eWlRImAa2Ap1u6OT0xqSnoEHzr69LZKnQl7kWw1nI6YPIjmKo4o3WiXi2TYK0PWNgVm9h9U=', 'qJawyIf6ie28TnUi68CN556GN/5yHrOMzh8mHIUDYZv/X0VikLt4rQb6GI52qI3Y21auIH8YAkdDoP1qMvpt2gt/2a9RnRb3998tC5u9lT04G3Xqyp2NiShm0XZQYbyV9i9kXHlkpdkHmfVk', '2CHeEDAYUxUx6zRy0TQbfXcAZiwN/dLdOBbMrePQ8VeGr0qDFJHWJe6x00KqnMo4CT27mDGEPuHXuOF5rClouzF7cSD9wiHRK70Xc+1O50SQfS5TbxfkM/1stBRK', 'iD4MUUspsTrshcOw9DtL5ydBPdLBniO8+7o5awm/wvlegg+76iOfU8lLjIAGz63fSUjV3TlnltP41/kl6Dlc7fBcJ5/beVVYNOMJBvDQw1aTkouUs8ZS5QlIuKI=', '1649434355_d3b82d9ba2c8c685602e.jpg', 'HNSIvv7bD+WsqWMrwG1dbzgG5ebPiLsGib54IAwNLXd4Ba5KOjxgl+nwKJGe50cEyWt4McxMK9JfIbbF2ghKGbUnIzZABZOFapnlfOcYEyfX3e8=', 1649434355, 'PMA - Penanaman Modal Asing', 'ubgpYTt9Ft6bPDpOZWoFEOmsfr6NuHq/6ttrWPPbPAcJOXlWEejw0kXCLhje67Cms9JdMIAsZgQvkTY+h0uXOkiNP5RIqL3ucIGYaTnKSpFwLAGgkyarmzQ=', 'yBWWTfrhYpnQ7IRp7HnW+GqeYvKIQWhM8O0KbIKdnz2oLaki7qhLikCCaLpm9EDhGfjJC6FK1Ny5aWHDdZxfHJPHjLUKe2C2vKTSnBs5HzdbQV5S50gvBSQd', 'kcRFmUusrIsY5yKZRl2dvxFyqueTBC4UUesMa9lcXi0QqLSBIArfXDHGXFn3fg1ALpyr1OFXlWD+aRZZKbV8GZM147crvAoy57t4PgbRJBryAMQiWTJjseAW4w==', 'chachachannel81@gmail.com', 'b9q8OfN2MltRLHdb32qdO9rRoVGOGfjWbF6AFZXn28L9ATgNQbsuGElCnWCYOi8qlaSkWn/TqKNsK/b9HnNCRpHdAOO+2vRc8EBlHmwps7o/cyXcCF9+RLWM', '8na4VBFB8duDNaPS8M8IK6dYKqgaVKAxST9Z97kKuCCDDvG9R6f15vUakyAZRRrESuXD+OE08pCRaIg+DVjGhRd004AxhEmWu/WllgMXD7QfkEfmG3txNbG+WOi0'),
+	(24, '0G0PH+ODaIDjw8qS6LMFyp+ySQrT/J8RCi/ZYGIbImFCPVVBUbTJTZnkF86odq2DJ6IOq8/2LWheSr6PThrxRAoD0xqxHQlHeQDewb+8vlAtFiaIVDePq7Q87fNUZxZa', 'k/oeSitVm4DKx34psZ9tbg8JPQrV0Pe0JGCoGBLBEkZnOqJ7eb2pMioapmx+2MBBkep8YWugYpYQ3hYl5+Hg3tffaQALpYDA3/sDhregA7vts9UKdvkOyRvCLmZPYKscdGNojSX91DYqYlRl', 'rh63mW23i+/70ykzvF2RFcbr8sgVeQz9sP/Hr6ZmU5/6Qdr8dot3aP4XcBOgiA65ooPpIXXbJoLnacmYuka2OdLSAIJpQO8DUhE7YDE1FXKLH8mkZvFscEuXmFoq', 'AroGlJqBvQCPv3dx5c5HtvxjA5MI/jSvXFF3yPqC9MPPjvaMzDCLc7h9C67RU2C4SnOVMWtlFVH20WdTRT2HZieh4a/cbVEW6HOicHaKYVCqAuYSW0+SE1aPP67vOi5n', '1649434423_a699bc6277fe62384ad6.jpg', '0D2EAdpEqIfYjyW1O9taXOy8A86SNmmSyJDJu0sCfc8ioTqLiVPtuxcHx3iGYlHsRolMBWj6EEK0372sFkAndyLRKWc2QHT7KuAnWZ+WRPGLh9o=', 1649434423, 'PMA - Penanaman Modal Asing', '+5iJRz/eQ+egWjZvqLn7U1REd9wWZ+5dXp7gWN1hlezb8JmeMlf5PIOJyi1tlwIcAee/2W+3A8UMLdr0M/D1vacBoBaMLHl5E6zodV3pXW6CLztVs9uwKbQ=', 'ME37nj2iTVZQFnPDPCQC8/626alZ7eZRgbwpk9oramTwQUmOZ6ZhIjF/PX3FoX90ByfqYJ9885O0lIY36vKKhpSnLoWgadtsXl9bHDVwJxS76nr+IvCNrPfQ', 'bGw6aEYh280YwW4fBG9IZjgMcjuiDTjTJZYR24caepickFjAoXu34O7t5A1tjEnnlVszMlrQ9N0Osp2APK2e9t4S1RUYx5TAE4vlpuVBP7DO53eRLi1AYM7sdQ==', 'chachachannel81@gmail.com', 'X3jmoMEvoVSFk5YCSMQs4M17JY5NNhYrTyHOjEiZvSIPwGmKRlqtcKrr4GUzcC8nIhAD7vHB/d3WWgJecKBiYER/tCGo5C9jrzA8u9jz9ugFhp430+RQ7W6U', '9ZXNy9F5zjDXLb2BVE6hW34RJBDcJbazSxzeRzHTBjZljFHehPC/atoJWwDxtmxWZTWQ3MEFJVjiSWBpGdemEZNS9/bZCtFmTjms1bcOHRd87ITp9gcr80jEabL7'),
+	(25, '7scN3u/mVtsQYvq3qZt/YFVa9SBV4F9F03FnYu2rKJXlzQUDITnaZsAvd4nq6081gZ6riikmbS3KuKcv2P84znRMkEXVgqlYbWH8fV8ZxIYHGwi6VwTumoovjQ==', 'dJjCnI0GmwRvDiTbsssSXa1o6cwyP2IDl8gopLbYYq43+Eawyv3pefSkxUmZhxRocuLQ07PPdn/z4VloxJkMlZp0/A+QhHvKOXDmYKqiwhTcY+QX4GG1Ul/zKHqKkxDm2uXdyPODmTWes447', 'D3wQ0ThKJGI6RpVTxakZqS6f8ecsKy1+zXKcTocmIi12ONndmsiFD5IzyhzoowwlEMOScMl+v4XwEHQQEab4fPPIfQ6iJlDcpCEBZlDUP9AMmk4fYkprrb6gpX2o', 'Dbx4ulfdrujuZi6Rwz6CoMTNZZo81VdjFRj1QcYla25PP5hanQwT4amk32p1jMHEsWGc1YXR6iKWE9zLv0IO1H5PEmqwi/w1ldyKp6JI5uX2/OqatvcRTfVBXA==', '1649434509_23fa6789df00421bf0ae.jpg', 'b3QUVMqCppIDyyhmynYX/CdtQbdZeLKtYOT/r7v3CuJCrZ/rOqzbPcUN7yQPb5dsL6Oi+wyC/rL/6Z/R4g6VXpPdC9IxO7OFmXRLgm0bBIL4aoo=', 1649434509, 'PMA - Penanaman Modal Asing', 'zNOdWubhc4Pu/Z1AaL006j4mBgGONOgqACJPuS+ys4Np0tuVP3P8S4y1tPCGSSlL3C1UNq3nMHICV9Zv+eYSq983Odjpq/u9ZixqXOdJaDCkJFe/73Vzfqo=', '8EvuS5LLTJioXO4b/5+t8P8MwP6Tui4unDCV/zfmRHXKNDEt6MsfRBXEYtnSemaH3j6qGRQfebRCgIoiEsto0U8TIAh4fhcEJTl7Eanm64fv64txZKi7Iert', 'XCdHAocHW/gTFUifd5p4eRWg7KK2keIQLwBa6fq4TIwROnjqJOZ75YyVyn2bmqSMGjGp86K9bmYTqCNvtcHjYGkYLkxlT4cgUA5SP4ArX9dzd/c+2cOmTnnIAw==', 'chachachannel81@gmail.com', 'K9ioGEau6Et3VsF1GgT29xWa7hjVc0+PS3zJmLRqG6qbWVB4agsZuFyPy80fKh07xBrY3NB0lEEy6cinUwmcfUku4YylYzBEyaoWKx6djplPUs05w1w2ukpa', '+jtc6PNmaXN8VZzsmtb0sGssp42jIr2cBJVZeTQ9rDvkiZW6fKMWeURdODO64d1JU4lmh3F3/R56MP03DMP9xHI+TOFE327ajUn1OjJS0YtKLApmIlI5Z0bPbF2S'),
+	(26, 'NdhtcNy9eBRMvdIK7I0RQZxZZWSeK8at2+uOB3dtWK/5b4GleXpsOl/W8dVkd6+RjDa6Y/z9cLH7dfLvHX9AJI8Dz0tDoe57EU+3UMRQGsjaVIqE5ONRm6UfoeCpe1U=', 'vxPUdB9OGiHr2I4Yg8NCRjGvHBE7w0iKQWWeBAlhlmIS7EKOruCHHqfKBq5xdQsi01Chpw3F/qw2NVabu46+JAySDx+9AGXvFClM9tgaHCkU0E1+hFAg/QuqkBXgOokbC20azNbdoSguBrt7', 'MPR8NRUGJ9v0RxfvyDNSqH0ZEu4AKXpE84Ycc55kuJFLmOn1tXxJbHdGZsHGyAMyFjUrTmJHQzUqQxmb/6e7KHPBnUnfhweliYvjZvGudPsq0O/Piz670ocFWSzq', 'v+FVJFG5QyPcmqNTE6qmXvyD+qlR/wRl1/1/jJ154dqrQKj7yHfK6WtvZ1xR8N8G0pTW9brTt/0/O99tYVfYgUp3/jVYThEJvTBuTKTtnD1TweOokA03D7hKgYi/gZ0=', '1649434730_522eb66d6c098cfc51dd.jpg', 'bJdcMJA2IgqUNgbXkd0J710aSH8LEzF5hjyhLnjl670PcOY8WrCCKlvv4YQMz3X3IFkRflGu5nHDoTT4mnKPTbph42pFByH3vHfYydAYYDF/GE0=', 1649434730, 'PAJAK BREVET A&B', 'rbjO1wjU53Ju8OnheWm5Po/wzF4F2n2xl5yde/I8znbfhQzvVo7JkYiJDyHWti4o7GX6N86KV0vCNmFNZ5MjuwfIhp5utzHMGNW1lV/D/eIZbaBYoaoHEDU=', 'Fb61FjlDP4iKjMf0yzoewFL8SLwUPjtQfdpi1SFF+UXd6nYV02zMfKe1x1dbnrkvHTDtRzd7YmPAygaRS3bS7vRcBjN3MS6qrkke211FaSYTmNkdIdBz4uVB', 't7wrXVsNmNx5jzf++0oOJrk+njsFyRBKNNfE6xNNAZoZnlmmzmH1Gd6HgMe8EuOkeLJk6cvF4VbXcKE1u9H4t7qEjnWX4nUhJBt4sxkVGvgpB9G1/BoeFO26Yw==', 'chachachannel81@gmail.com', 'qVhG+o2Qn3x5YfbKjBpx+TF5kQ3ubO4j+EvcTowpu6QOigIFM2u48Q0KoqvEjWXh7lEvgUamMpFPbadlTSyJfckpkLpMkRxIQrPvr4FEPh7wBv8m9lhwxcRJ', 'b11Th89qREjHjedwqV6ZNL9RC2vRpMvMW5YJIuFh8AVC/zeYPzl/JB04eL6Qz6NS/zhLM4fK7XJobeVXmPcaD+Wo3RZToGcP9ihgwn/X+lk7c1W72AXYOJAw29Cs');
+/*!40000 ALTER TABLE `pendaftaran` ENABLE KEYS */;
+
+-- Dumping structure for table login_db.total
+CREATE TABLE IF NOT EXISTS `total` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `registrant` varchar(50) DEFAULT NULL,
+  `date_created` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=60 DEFAULT CHARSET=latin1;
+
+-- Dumping data for table login_db.total: ~27 rows (approximately)
+/*!40000 ALTER TABLE `total` DISABLE KEYS */;
+INSERT INTO `total` (`id`, `registrant`, `date_created`) VALUES
+	(23, 'registered', '2021-12-10 00:47:31'),
+	(24, 'registered', '2021-12-10 00:47:37'),
+	(35, 'registered', '2022-03-25 21:13:07'),
+	(36, 'registered', '2022-03-25 22:05:07'),
+	(37, 'registered', '2022-04-08 22:40:35'),
+	(38, 'registered', '2022-04-08 22:43:32'),
+	(39, 'registered', '2022-04-08 22:45:54'),
+	(40, 'registered', '2022-04-08 22:48:00'),
+	(41, 'registered', '2022-04-08 22:50:01'),
+	(42, 'registered', '2022-04-08 22:52:06'),
+	(43, 'registered', '2022-04-08 22:54:45'),
+	(44, 'registered', '2022-04-08 22:57:15'),
+	(45, 'registered', '2022-04-08 22:59:19'),
+	(46, 'registered', '2022-04-08 23:02:10'),
+	(47, 'registered', '2022-04-08 23:04:28'),
+	(48, 'registered', '2022-04-08 23:08:58'),
+	(49, 'registered', '2022-04-08 23:11:14'),
+	(50, 'registered', '2022-04-08 23:12:35'),
+	(51, 'registered', '2022-04-08 23:13:43'),
+	(52, 'registered', '2022-04-08 23:15:09'),
+	(53, 'registered', '2022-04-08 23:18:50'),
+	(54, 'registered', '2022-04-14 18:10:49'),
+	(55, 'registered', '2021-04-14 18:24:01'),
+	(56, 'registered', '2022-04-14 18:24:33'),
+	(57, 'registered', '2021-04-14 18:24:44'),
+	(58, 'registered', '2021-04-14 18:24:53'),
+	(59, 'registered', '2021-04-14 18:25:09');
+/*!40000 ALTER TABLE `total` ENABLE KEYS */;
+
+-- Dumping structure for table login_db.users
+CREATE TABLE IF NOT EXISTS `users` (
+  `user_id` int NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) DEFAULT NULL,
+  `tempat_tanggal_lahir` text,
+  `email` varchar(100) DEFAULT NULL,
+  `password` text,
+  `created` int NOT NULL,
+  `status` varchar(200) NOT NULL,
+  `badge` text,
+  `photo` varchar(255) NOT NULL DEFAULT 'default.svg',
+  `nama` text,
+  `is_active` int NOT NULL,
+  `aktif` varchar(50) DEFAULT NULL,
+  `phone` text,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=216 DEFAULT CHARSET=latin1;
+
+-- Dumping data for table login_db.users: ~3 rows (approximately)
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` (`user_id`, `username`, `tempat_tanggal_lahir`, `email`, `password`, `created`, `status`, `badge`, `photo`, `nama`, `is_active`, `aktif`, `phone`) VALUES
+	(210, 'ardeanreza6', NULL, 'ardeanreza7@gmail.com', '$2y$10$qq1kQodxQNfV1JFFf8joNuARJsyk1vmL1Kth5rpf2H5hx1FfAYeEu', 1641893472, 'ADMIN', NULL, 'default.svg', NULL, 1, 'activated', NULL),
+	(213, NULL, NULL, 'chachachannel@gmail.com', '$2y$10$O5AiEmC/P1ianq29R/Jsh.YDCkL6NyStq/Ijh89GLWnE7SXs0m4tu', 1648217586, 'USER', NULL, 'default.svg', '6VeOZbDH5Xn+jb4ZhCZiivDqYWy3sWskCSQULMUCNEyiivtW4H097B+MeYbQ7D2U1gCiXP2i9peEtEVD3X3sXI00AIP+TNZVGYsoMKvMjJvAKJXygj7RLbI7lPfxmUPnybr+ZA==', 2, 'activated', 'qTFBgjhkHYkpSLlYhBx1A0uiUzM6+ZjqmcZIkowx2C71ulIOVIat565YJZw4TImqCO/zi6BXbw3sydtPzmx5tGxqkTC1CilLCvj6au6Y4YUxx8X6cHxfuKd9'),
+	(215, NULL, NULL, 'chachachannel81@gmail.com', '$2y$10$2JL3.H8I4q81q/gx2nZU/.3Dh34pZkP/KNzfY5QI2Wb7pRZtoi7dq', 1649934648, 'USER', NULL, 'default.svg', 'AK1QkReaMy7mn/wXQeZH/SZ9v/ZbUsUfBD6V33rlLzhN8tfCg1PcRou7Q0wLKhQxj/Lagmzz+32XtLFgUgN+267MsiX30HXpSRWPv2KxdGI0vIaQhVfzlEfAJrQEyqXyc8E6JQmj', 0, 'deactivated', 'QGuiMNhr93dKQU1Jc2kGrGRF8VooKa/l6kDv9+CQzu6/byJbhqiJmeCb3AQqP/vxS+jA/v5cwUr5vqv2fnsOmGaHzjQP5q1vEOIiL9DcHBOn4+K5ZhxKe1jGzg==');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+
+-- Dumping structure for table login_db.users_token
+CREATE TABLE IF NOT EXISTS `users_token` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `email` varchar(200) NOT NULL,
+  `token` varchar(200) NOT NULL,
+  `date_created` int NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=65 DEFAULT CHARSET=latin1;
+
+-- Dumping data for table login_db.users_token: ~0 rows (approximately)
+/*!40000 ALTER TABLE `users_token` DISABLE KEYS */;
+INSERT INTO `users_token` (`id`, `email`, `token`, `date_created`) VALUES
+	(64, 'chachachannel81@gmail.com', 'olBV7rt3gmq1SLix0nYEuwfIpjyo4ML5hGeLqmhGrr8=', 1649934648);
+/*!40000 ALTER TABLE `users_token` ENABLE KEYS */;
+
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

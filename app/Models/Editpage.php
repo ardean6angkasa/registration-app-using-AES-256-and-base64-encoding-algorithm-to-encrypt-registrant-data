@@ -1,9 +1,11 @@
-<?php namespace App\Models;
+<?php
+namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Editpage extends Model{
-    
+class Editpage extends Model
+{
+
     public function updateProfile1($data, $user_id)
     {
         $query = $this->db->table('users')->update($data, array('user_id' => $user_id));
@@ -52,35 +54,33 @@ class Editpage extends Model{
     }
 
     public function updateProfile2($data, $user_id)
-    {  
-        $builder = $this->db->table('users');
-        $builder->where('user_id',$user_id);
-        $query = $builder->get();
-        foreach ($query->getResult() as $row)
     {
-        if ($row->photo != 'default.svg'){
-            $file = "./img/$row->photo";
-            unlink($file);
+        $builder = $this->db->table('users');
+        $builder->where('user_id', $user_id);
+        $query = $builder->get();
+        foreach ($query->getResult() as $row) {
+            if ($row->photo != 'default.svg') {
+                $file = "./img/$row->photo";
+                unlink($file);
+            }
+            $query = $this->db->table('users')->update($data, array('user_id' => $user_id));
+            return $query;
         }
-        $query = $this->db->table('users')->update($data, array('user_id' => $user_id));
-        return $query;
-    }
     }
 
     public function deleteProfile($user_id)
     {
-    $builder = $this->db->table('users');
-    $builder->where('user_id',$user_id);
-    $query = $builder->get();
-    foreach ($query->getResult() as $row)
-    {
-        if ($row->photo != 'default.svg'){
-            $file = "./img/$row->photo";
-            unlink($file);
+        $builder = $this->db->table('users');
+        $builder->where('user_id', $user_id);
+        $query = $builder->get();
+        foreach ($query->getResult() as $row) {
+            if ($row->photo != 'default.svg') {
+                $file = "./img/$row->photo";
+                unlink($file);
+            }
+            $query = $this->db->table('users')->delete(array('user_id' => $user_id));
+            return $query;
         }
-        $query = $this->db->table('users')->delete(array('user_id' => $user_id));
-        return $query;
-    } 
     }
-    
+
 }
